@@ -21,6 +21,9 @@
 
 @import "@{templateCommon}/bk-less-framework.less";
 
+@import "https://raw.githubusercontent.com/basekit-templates/bk-less-framework/master/vars.less";
+
+
 
 // Theme Includes
 // --------------
@@ -278,24 +281,29 @@ select::-ms-expand{
 
 
 .template-header {
+    background-color: @color-swatch7;
     // Flex
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 300px;
+    max-width: 400px;
+    width: 100%;
     height: 100vh;
-    padding-top: 65px;
+    padding: 4em 2.5em 2.5em;
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align: center;
     z-index: 1;
-    @media only screen and (max-width: 1024px) {
-        width: 180px;
+    @media only screen and (max-width: 1300px) {
+        max-width: 300px;
     }
-    @media @tablet800px {
+    @media only screen and (max-width: 960px) {
         display: block;
         min-height: initial;
         position: relative;
+        max-width: 100%;
+        padding: 2em 0 0;
         width: 100%;
         height: auto;
         overflow: visible;
@@ -306,17 +314,19 @@ select::-ms-expand{
     // Footer
     .template-footer {
         display: block;
-        margin-bottom: 25px;
-        @media @tablet800px {
+        margin-bottom: 0;
+        @media only screen and (max-width: 960px) {
             display: none;
         }
     }
-    .logo,
+    .logo {
+        margin-bottom: 2px;
+    }
     .companyname {
         margin-bottom: 10px;
     }
     .logo-image {
-        @media @tablet800px {
+        @media only screen and (max-width: 960px) {
             display: block;
             margin: 0 auto;
         }
@@ -327,15 +337,21 @@ select::-ms-expand{
     flex: 1 0 auto;
 }
 
+
+// Company Logo
+// ------------
+
+.logo-link { 
+    display: block;
+}
+
+
 // Company Name
 // ------------
 
 .companyname {
     display: block;
     padding: 8px 0;
-    @media @tablet800px {
-        text-align: center;
-    }
 }
 
 .company-link:hover {
@@ -347,7 +363,7 @@ select::-ms-expand{
 // -------
 
 .widget__profile .socialicons {
-    @media @tablet800px {
+    @media only screen and (max-width: 960px) {
         display: none;
     }
     .social-name { display: none; }
@@ -355,7 +371,7 @@ select::-ms-expand{
         color: gainsboro;
         text-decoration: none!important;
         &:before {
-            font-size: 22px;
+            font-size: 20px;
             margin-right: 0;
         }
         &:hover {
@@ -402,7 +418,7 @@ select::-ms-expand{
 // ---------
 
 .companycopyright {
-    @media @tablet800px {
+    @media only screen and (max-width: 960px) {
         display: none;
     }
     .copyright {
@@ -417,11 +433,12 @@ select::-ms-expand{
 // ----------
 
 .template-nav {
-    margin-top: 50px;
+    margin-top: 65px;
     // Flex
-    @media @tablet800px {
+    @media only screen and (max-width: 960px) {
+        background-color: white;
         display: block;
-        margin: 1.5rem 0 1rem;
+        margin: 1.5rem 0 0;
     }
 }
 
@@ -430,12 +447,16 @@ select::-ms-expand{
 // Navigation List
 .bk-extendednavigation {
     .navigation-body {
-        @media @tablet800px {
+        @media only screen and (max-width: 960px) {
             height: 0;
             padding: 0;
             opacity: 0;
             visibility: hidden;
             &.open {
+                background-color: @color-swatch1;
+                -webkit-box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
+                -moz-box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
+                box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
                 height: 100%;
                 padding-bottom: 5px;
                 position: relative;
@@ -446,9 +467,6 @@ select::-ms-expand{
         }
         .navigation-list {
             margin-top: 0;
-            @media @mobile {
-                margin-top: 12px;
-            }
         }
     }
 }
@@ -457,15 +475,8 @@ select::-ms-expand{
 .navigation-item {
     display: block;
     white-space: normal;
-    &:after {
-        border-bottom: 1px solid @color-swatch7;
-        content: "";
-        display: block;
-        max-width: 100%;
-    }
     &:hover {
         .navigation-list--children {
-            border-top: 1px solid darken(@color-swatch7, 10%);
             height: auto;
             padding: 0;
             position: relative;
@@ -489,7 +500,7 @@ select::-ms-expand{
     // Folder Styles at Mobile
     &.folder {
         ul {
-            @media @tablet800px {
+            @media only screen and (max-width: 960px) {
                 height: 0;
                 padding: 0;
                 opacity: 0;
@@ -497,7 +508,7 @@ select::-ms-expand{
             }
         }
         &.open ul {
-            @media @tablet800px {
+            @media only screen and (max-width: 960px) {
                 border-top: 1px solid darken(@color-swatch7, 10%);
                 height: auto;
                 padding: 0;
@@ -519,10 +530,14 @@ select::-ms-expand{
     }
     // Dropdown Item
     .item-name {
-        padding-left: 0;
+        text-transform: uppercase;
         .transition(all 0.5s ease-out);
         &:hover {
-            color: darken(@color-swatch6, 40%);
+            color: lighten(@color-swatch6, 50%);
+
+            @media only screen and (max-width: 960px) { 
+                color: darken(@color-swatch5, 10%);
+            }
         }
     }
     // Dropdown Arrow
@@ -532,10 +547,14 @@ select::-ms-expand{
         margin: 2px 8px;
     }
     &.selected > .item-name {
-        color: darken(@color-swatch6, 40%);
+        color: lighten(@color-swatch6, 50%);
+        @media only screen and (max-width: 960px) {
+            color: @color-swatch5;
+        }
     }
     // Dropdown Folder
     .navigation-list--children {
+        background-color: lighten(@color-swatch7, 85%);
         display: block;
         position: absolute;
         height: 0;
@@ -553,7 +572,7 @@ select::-ms-expand{
     }
     // Dropdown list items
     .navigation-item--child .item-name {
-        padding: 12px 0 12px 12px;
+        padding: 12px;
     }
 }
 
@@ -563,20 +582,20 @@ select::-ms-expand{
     &:after {
         content: "+";
         position: absolute;
-        right: 0;
+        right: 30px;
     }
-    @media @tablet800px {
-        background: transparent;
-        border-bottom: 1px solid @color-swatch7;
+    @media only screen and (max-width: 960px){
+        background: @color-swatch1;
+        border: 1px solid #EDEDED;
         color: @color-swatch4;
         display: block;
         font-weight: @font-swatch4-font-weight;
-        padding: 12px 0;
+        padding: 15px 30px;
         text-align: left;
         text-transform: uppercase;
         width: 100%;
         &:hover {
-            background: transparent;
+            background: @color-swatch1;
         }
     }
 }
@@ -591,27 +610,30 @@ select::-ms-expand{
 div[role="main"] {
     display: inline-block;
     float: left;
-    padding: 65px 0 0 350px;
+    padding: 40px 0 40px 400px;
+    max-width: 1800px;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-    @media only screen and (max-width: 1024px) {
-        padding-left: 200px;
+    @media only screen and (max-width: 1300px) {
+        padding-left: 300px;
     }
-    @media @tablet800px {
+    @media only screen and (max-width: 960px){
         display: block;
         overflow-y: initial;
-        padding: 20px 0 0;
+        padding: 0;
         width: 100%;
     }
 }
 
-.bk-zone {
+.home-page div[role="main"] {
+    padding-top: 0;
+}
+
+
+.bk-zone,
+[data-widget-type="ecomproduct"] {
     margin: 0 auto;
     max-width: 90%;
-
-    @media @tablet800px {
-        max-width: 100%;
-    }
 }
 
 h1 {
@@ -641,6 +663,11 @@ h2 {
 .home-page {
     .gallery-list {
         .clearfix;
+        margin-bottom: 4em;
+        @media only screen and (max-width: 960px){
+            margin-bottom: 2em;
+        }
+
         &:hover li {
             opacity: 1;
         }
@@ -649,40 +676,44 @@ h2 {
 
         // Gallery List Items
         float: left;
-        padding: 0 12px 24px;
+        padding: 0;
         height: auto;
         width: 33.33%;
         @media @tablet800px {
             width: 50%;
         }
         @media @mobile {
-            padding: 0 0 24px;
+            padding: 0;
             width: 100%;
         }
         img {
-            -webkit-filter: grayscale(0%);
             .transition(all 0.5s ease-in-out);
         }
         &:hover {
             img {
-                background-blend-mode: multiply;
-                opacity: 0.25;
-                -webkit-filter: grayscale(100%);
+                -webkit-filter: grayscale(0);
+                -webkit-filter: grayscale(0%);
+                filter: none;
+                filter: grayscale(0%);
             }
             .image-link {
                 background-color: @color-swatch4;
                 text-decoration: none;
             }
             figcaption {
-                height: 100%;
+                height: auto;
                 opacity: 1;
                 position: absolute;
-                top: 0;
-                .transform(scale(0.85));
+                bottom: 0;
+                left: 0;
+                right: 0;
                 visibility: visible;
 
                 .caption-link {
+                    background-color: fade(@color-swatch7, 50%);
+                    display: block;
                     height: 100%;
+                    padding: 1em;
                 }
             }
         }
@@ -704,14 +735,17 @@ h2 {
         .image {
             display: block;
             max-width: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            -webkit-filter: grayscale(0.9);
+            -webkit-filter: grayscale(90%);
+            filter: gray;
+            filter: grayscale(90%);
         }
     }
     .gallery__figure {
-        .transform(scale(1));
         .transition(all 0.5s ease-in-out);
-        &:hover {
-            .transform(scale(1.05));
-        }
     }
 
     // Image Caption
@@ -724,9 +758,6 @@ h2 {
         padding: 0;
         opacity: 0;
         text-align: center;
-        -webkit-transform: scale(0.85);
-            -ms-transform: scale(0.85);
-                transform: scale(0.85);
         width: 100%;
         visibility: hidden;
         .transition(all 0.5s ease-in-out);
@@ -734,18 +765,8 @@ h2 {
             left: 0;
         }
 
-        .caption-link {
-            // Flex
-            display: flex;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            &:hover {
-                text-decoration: none;
-            }
+        .caption-link:hover {
+            text-decoration: none;
         }
 
         .image-title {
@@ -753,8 +774,7 @@ h2 {
             text-transform: uppercase;
             font-family: @font-swatch4-font-family;
             letter-spacing: 1px;
-            font-size: 15px;
-            border: 2px solid rgba(255,255,255, 0.3);
+            font-size: 14px;
             display: inline-block;
             padding: 6px 12px 5px;
         }

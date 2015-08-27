@@ -1,26 +1,21 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-<!-- CONTAINER -->
-<div class="template-container">
+<!-- HEADER -->
+{% include "includes/header.twig" %}
 
-	<!-- HEADER -->
-	{% include "includes/header.twig" %}
+<!-- MAIN SECTION -->
+<div role="main">
 
-	<!-- MAIN SECTION -->
-	<div role="main">
-
-		<!-- MAIN WIDGET ZONE -->
-		{{widget('ecomproduct', 'singleproduct', {})|raw}} 
-
-	</div>
-	<!-- END MAIN SECTION -->
-
-	<!-- FOOTER -->
-	{% include "includes/footer.twig" %}
+	<!-- MAIN WIDGET ZONE -->
+	{{widget('ecomproduct', 'singleproduct', {})|raw}} 
 
 </div>
-<!-- END CONTAINER -->
+<!-- END MAIN SECTION -->
+
+<!-- FOOTER -->
+{% include "includes/footer.twig" %}
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 

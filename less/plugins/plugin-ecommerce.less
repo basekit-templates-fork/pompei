@@ -445,12 +445,13 @@
     }
     .tag-link,
     .category-link {
-        background-color: @color-swatch7;
+        background-color: lighten(@color-swatch7, 80%);
         color: @color-swatch5;
         padding: 2px 8px;
         .transition(all .5s ease-out);
         &:hover {
             background-color: darken(@color-swatch7, 8%);
+            color: @color-swatch1;
             text-decoration: none;
         }
     }

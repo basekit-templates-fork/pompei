@@ -199,6 +199,14 @@
 	}
 }
 
+.pagination-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
 // Pagination Footer
 
 .blog-post-list {
@@ -352,26 +360,26 @@
 
 	// Categorys
 	.category-link {
-		background-color: lighten(@color-swatch7, 1%);
+		background-color: lighten(@color-swatch7, 85%);
 		color: @color-swatch5;
 		padding: 6px 8px;
 		.transition(all .5s ease-out);
 		&:hover {
 			background-color: darken(@color-swatch7, 4%);
-			color: @color-swatch4;
+			color: @color-swatch1;
 			text-decoration: none;
 		}
 	}
 
 	// Tags
 	.tag-link {
-		background-color: lighten(@color-swatch7, 1%);
+		background-color: lighten(@color-swatch7, 85%);
 		color: @color-swatch5;
 		padding: 6px 8px;
 		.transition(all .5s ease-out);
 		&:hover {
 			background-color: darken(@color-swatch7, 4%);
-			color: @color-swatch4;
+			color: @color-swatch1;
 			text-decoration: none;
 		}
 	}

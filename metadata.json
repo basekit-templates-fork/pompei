@@ -25,12 +25,12 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#ca9e05",
-            "color3":"#2b2d30",
+            "color2":"#D7AE6F",
+            "color3":"#D7AE6F",
             "color4":"#2b2d30",
             "color5":"#787878",
-            "color6":"#a8aaad",
-            "color7":"#f0f0f0"
+            "color6":"#b4b4b4",
+            "color7":"#1C1D22"
         },
         "Swatch 2": {
             "color1":"#ffffff",
@@ -104,7 +104,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-family": "\"Lora\", \"Georgia\", serif",
             "font-size": "17px",
             "font-weight": "inherit",
             "line-height": "30px",
@@ -112,8 +112,8 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"PT Serif\", Georgia, serif",
-            "font-size": "17px",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "15px",
             "font-weight": "400",
             "line-height": "inherit",
             "color": "@color-swatch6",
@@ -131,7 +131,7 @@
             "letter-spacing": "1px",
             "color-hover": "@color-swatch1",
             "background-color": "@color-swatch3",
-            "background-color-hover": "lighten(@color-swatch3, 20%)"
+            "background-color-hover": "darken(@color-swatch3, 7%)"
         },
         "font8": {
             "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
@@ -150,12 +150,12 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "25px",
-            "font-weight": "700",
+            "font-weight": "600",
             "line-height": "inherit",
-            "color": "@color-swatch4",
-            "letter-spacing": "1px"
+            "color": "@color-swatch1",
+            "letter-spacing": "2px"
         }
     }
 }
