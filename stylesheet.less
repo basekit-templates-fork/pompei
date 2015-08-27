@@ -42,7 +42,7 @@
 // -----------------------------
 
 
-@tablet800px: ~"only screen and (max-width: 800px)";
+@tablet960px: ~"only screen and (max-width: 960px)";
 @mobile650px: ~"only screen and (max-width: 650px)";
 
 
@@ -295,7 +295,7 @@ select::-ms-expand{
     @media only screen and (max-width: 1300px) {
         max-width: 300px;
     }
-    @media only screen and (max-width: 960px) {
+   @media @tablet960px {
         display: block;
         min-height: initial;
         position: relative;
@@ -312,7 +312,7 @@ select::-ms-expand{
     .template-footer {
         display: block;
         margin-bottom: 0;
-        @media only screen and (max-width: 960px) {
+       @media @tablet960px {
             display: none;
         }
     }
@@ -323,7 +323,7 @@ select::-ms-expand{
         margin-bottom: 10px;
     }
     .logo-image {
-        @media only screen and (max-width: 960px) {
+       @media @tablet960px {
             display: block;
             margin: 0 auto;
         }
@@ -360,7 +360,7 @@ select::-ms-expand{
 // -------
 
 .widget__profile .socialicons {
-    @media only screen and (max-width: 960px) {
+   @media @tablet960px {
         display: none;
     }
     .social-name { display: none; }
@@ -390,9 +390,8 @@ select::-ms-expand{
     .avatar {
         float: left;
         max-width: 98px;
-        width: 15%;
         margin-right: 0;
-        padding-right: 5%;
+        padding-right: 30px;
     }
     .tweet-wrap {
         float: left;
@@ -411,17 +410,25 @@ select::-ms-expand{
     margin-left: 0;
 }
 
+.bk-profile {
+    .copyright,
+    .address-line,
+    .headline,
+    .strapline,
+    .description,
+    .business {
+        color: lighten(@font-swatch5-color, 10%);
+        font-size: bkscale(@font-swatch5-font-size, 0.92);
+        margin-top: 12px; 
+    }
+}
+
 // Copyright
 // ---------
 
 .companycopyright {
-    @media only screen and (max-width: 960px) {
+   @media @tablet960px {
         display: none;
-    }
-    .copyright {
-        color: lighten(@font-swatch5-color, 25%);
-        font-size: bkscale(@font-swatch5-font-size, 0.92);
-        margin-top: 12px;
     }
 }
 
@@ -432,7 +439,7 @@ select::-ms-expand{
 .template-nav {
     margin-top: 65px;
     // Flex
-    @media only screen and (max-width: 960px) {
+   @media @tablet960px {
         background-color: white;
         display: block;
         margin: 1.5rem 0 0;
@@ -444,7 +451,7 @@ select::-ms-expand{
 // Navigation List
 .bk-extendednavigation {
     .navigation-body {
-        @media only screen and (max-width: 960px) {
+       @media @tablet960px {
             height: 0;
             padding: 0;
             opacity: 0;
@@ -497,16 +504,18 @@ select::-ms-expand{
     // Folder Styles at Mobile
     &.folder {
         ul {
-            @media only screen and (max-width: 960px) {
+           @media @tablet960px {
                 height: 0;
                 padding: 0;
                 opacity: 0;
                 visibility: hidden;
             }
+            .item-name {
+                color: darken(@color-swatch5, 10%);
+            }
         }
         &.open ul {
-            @media only screen and (max-width: 960px) {
-                border-top: 1px solid darken(@color-swatch7, 10%);
+           @media @tablet960px {
                 height: auto;
                 padding: 0;
                 position: relative;
@@ -532,7 +541,7 @@ select::-ms-expand{
         &:hover {
             color: lighten(@color-swatch6, 50%);
 
-            @media only screen and (max-width: 960px) { 
+           @media @tablet960px { 
                 color: darken(@color-swatch5, 10%);
             }
         }
@@ -545,7 +554,7 @@ select::-ms-expand{
     }
     &.selected > .item-name {
         color: lighten(@color-swatch6, 50%);
-        @media only screen and (max-width: 960px) {
+       @media @tablet960px {
             color: @color-swatch5;
         }
     }
@@ -581,7 +590,7 @@ select::-ms-expand{
         position: absolute;
         right: 30px;
     }
-    @media only screen and (max-width: 960px){
+   @media @tablet960px{
         background: @color-swatch1;
         border: 1px solid #EDEDED;
         color: @color-swatch4;
@@ -614,10 +623,10 @@ div[role="main"] {
     @media only screen and (max-width: 1300px) {
         padding-left: 300px;
     }
-    @media only screen and (max-width: 960px){
+   @media @tablet960px {
         display: block;
         overflow-y: initial;
-        padding: 0;
+        padding: 30px 0;
         width: 100%;
     }
 }
@@ -661,7 +670,7 @@ h2 {
     .gallery-list {
         .clearfix;
         margin-bottom: 4em;
-        @media only screen and (max-width: 960px){
+       @media @tablet960px{
             margin-bottom: 2em;
         }
 
@@ -676,7 +685,7 @@ h2 {
         padding: 0;
         height: auto;
         width: 33.33%;
-        @media @tablet800px {
+        @media @tablet960px {
             width: 50%;
         }
         @media @mobile {
@@ -816,7 +825,7 @@ h2 {
 
 .template-footer {
     display: none;
-    @media @tablet800px {
+    @media @tablet960px {
         display: block;
         float: left;
         margin: 30px 0;

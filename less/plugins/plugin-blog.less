@@ -77,7 +77,7 @@
 		margin-right: 5%;
 		width: 47%;
 		vertical-align: top;
-		@media @tablet800px {
+		@media @tablet960px {
 			margin-right: 0;
 			width: 100%;
 		}
@@ -89,7 +89,7 @@
 			background-color: transparent;
 			position: relative;
 			max-height: 250px;
-			@media @tablet800px {
+			@media @tablet960px {
 				max-height: 400px;
 			}
 			@media @mobile650px {
@@ -101,7 +101,7 @@
 			line-height: 0;
 			max-height: 250px;
 			vertical-align: middle;
-			@media @tablet800px {
+			@media @tablet960px {
 				max-height: 400px;
 			}
 			@media @mobile650px {
@@ -140,10 +140,10 @@
 	color: @font-swatch7-color;
 	display: inline-block;
 	font-family: @font-swatch7-font-family;
-	font-size: @font-swatch7-font-size;
+	font-size: bkscale(@font-swatch7-font-size, 0.9);
 	letter-spacing: @font-swatch7-letter-spacing;
 	margin: 8px 0 12px;
-	padding: 8px 8px 6px;
+	padding: 10px 8px 8px;
 	text-transform: uppercase;
 	.transition(all .5s ease-out);
 	&:hover {

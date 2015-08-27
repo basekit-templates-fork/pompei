@@ -72,7 +72,7 @@
     "fontSwatch": {
        "title": "Ek Mukta and PT Serif",
         "font1": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "36px",
             "font-weight": "700",
             "line-height": "44px",
@@ -80,7 +80,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "30px",
             "font-weight": "700",
             "line-height": "38px",
@@ -88,7 +88,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "20px",
             "font-weight": "700",
             "line-height": "inherit",
@@ -96,7 +96,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "18px",
             "font-weight": "700",
             "line-height": "inherit",
@@ -123,7 +123,7 @@
             "background-color-hover": "@color-swatch1"
          },
         "font7": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "15px",
             "font-weight": "inherit",
             "line-height": "inherit",
@@ -134,7 +134,7 @@
             "background-color-hover": "darken(@color-swatch3, 7%)"
         },
         "font8": {
-            "font-family": "\"Ek Mukta\", \"Futura\", Helvetica Neue, sans-serif",
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "34px",
             "font-weight": "700",
             "line-height": "inherit",
@@ -142,7 +142,7 @@
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "\"PT Serif\", Georgia, serif",
+            "font-family": "\"Lora\", \"Georgia\", serif",
             "font-size": "20px",
             "font-weight": "inherit",
             "line-height": "inherit",

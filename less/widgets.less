@@ -117,9 +117,6 @@
         .gallery-list {
             .clearfix;
             padding-top: 10px;
-            &:hover li {
-                opacity: 0.3;
-            }
         }
         // Gallery Item
         .gallery-item {
@@ -134,7 +131,7 @@
                 margin-right: 0;
             }
             // Display at 50% at tablet
-            @media @tablet800px {
+            @media @tablet960px {
                 width: 48%;
                 &:nth-child(2n) {
                     margin-right: 0!important;
@@ -163,10 +160,7 @@
                 }
                 figcaption {
                     background-color: fade(@color-swatch4, 65%);
-                    display: flex;
-                    height: 100%;
                     opacity: 1;
-                    .transform(scale(0.85));
                     .transition(all 0.5s ease-in-out);
                     visibility: visible;
                     overflow: hidden;
@@ -183,56 +177,44 @@
             }
         }
         .gallery__figure {
-            .transform(scale(1));
             .transition(all 0.5s ease-in-out);
             &:hover {
-                .transform(scale(1.05));
             }
         }
 
         // Hide Figcaption
         figcaption {
-            // Flex
-            display: flex;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-
             position: absolute;
             display: block;
-            height: 0;
+            height: auto;
             margin: 0;
-            padding: 0 15px;
+            padding: 0;
             opacity: 0;
             text-align: center;
-            top: 0;
-            .transform(scale(0.85));
+            bottom: 0;
+            left: 0;
+            right: 0;
             width: 100%;
             visibility: hidden;
-            @media @mobile {
-                left: 0;
-            }
-            .caption-link:hover {
-                text-decoration: none;
+            .caption-link {
+                display: block;
+                padding: 0.75em 0.5em 1.25em;
+                &:hover {
+                    text-decoration: none;
+                }
             }
             .image-title {
                 color: @color-swatch1;
                 text-transform: uppercase;
-                font-family: @font-swatch4-font-family;
+                font-family:@font-swatch4-font-family;
                 letter-spacing: 1px;
-                font-size: 15px;
+                font-size: 14px;
                 display: block;
-                padding: 6px 12px 5px;
             }
             .image-description {
                 color: darken(@color-swatch1, 15%);
-                font-size: 15px;
-                line-height: 23px;
+                font-size: 14px;
+                line-height: 21px;
             }
         }
 
@@ -608,7 +590,7 @@ button,
         margin-bottom: 5px;
     }
     .account-name {
-        font-family: @font-swatch5-font-family;
+        font-family: @font-swatch2-font-family;
         font-size: bkscale(@font-swatch9-font-size, 0.9);
         font-weight: @font-swatch5-font-weight;
     }
