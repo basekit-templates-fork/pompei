@@ -20,6 +20,7 @@
 // -------------------------
 
 @import "@{templateCommon}/bk-less-framework.less";
+@import url(https://fonts.googleapis.com/css?family=Lora);
 
 
 // Theme Includes
@@ -188,9 +189,9 @@ code { padding: 2px 5px; }
 legend { display: none; }
 
 label {
-    color: @color-swatch4;
+    color: lighten(@color-swatch4, 10);
     font-family: @font-swatch7-font-family;
-    font-size: bkscale(@font-swatch7-font-size, 0.92);
+    font-size: bkscale(@font-swatch7-font-size, 0.85);
     font-weight: @font-swatch4-font-weight;
     text-transform: uppercase;
 }
@@ -280,9 +281,20 @@ select::-ms-expand{
 .template-header {
     background-color: @color-swatch7;
     // Flex
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+
     max-width: 400px;
     width: 100%;
     height: 100vh;
@@ -328,9 +340,67 @@ select::-ms-expand{
             margin: 0 auto;
         }
     }
+
+    .bk-profile {
+        .copyright,
+        .address-line,
+        .headline,
+        .strapline,
+        .description,
+        .business {
+            color: lighten(@font-swatch5-color, 10%);
+            font-size: bkscale(@font-swatch5-font-size, 0.92);
+            margin-top: 12px; 
+        }
+    }
+
+    // Twitter
+    .twitter .avatar {
+        display: none;
+        visibility: hidden;
+    }
+
+    .tweet-item .account-link {
+        color: @color-swatch1;
+    }
+
+    .tweet-item .tweet-content a {
+        color: @color-swatch2;
+    }
+
+    .twitter .tweet-wrap {
+        width: 100%;
+    }
+
+    // Signup form
+    .bk-profile .form-body {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        .form-group:first-child {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+
+        legend {
+            color: @color-swatch1;
+            text-align: left;
+        }
+
+        input {
+            border: 0;
+        }
+    }
 }
 
 .header-main {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
 }
 
@@ -410,18 +480,6 @@ select::-ms-expand{
     margin-left: 0;
 }
 
-.bk-profile {
-    .copyright,
-    .address-line,
-    .headline,
-    .strapline,
-    .description,
-    .business {
-        color: lighten(@font-swatch5-color, 10%);
-        font-size: bkscale(@font-swatch5-font-size, 0.92);
-        margin-top: 12px; 
-    }
-}
 
 // Copyright
 // ---------
@@ -458,6 +516,7 @@ select::-ms-expand{
             visibility: hidden;
             &.open {
                 background-color: @color-swatch1;
+                border-bottom: 1px solid #ededed;
                 -webkit-box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
                 -moz-box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
                 box-shadow: inset 0px 10px 35px -8px rgba(0,0,0,0.05);
@@ -612,6 +671,13 @@ select::-ms-expand{
 // 6. Main
 // -----------------------------
 
+[data-widget-type="gallery"] + .bk-zone {
+    padding-top: 40px;
+
+    @media @tablet960px {
+        padding-top: 30px;
+    }
+}
 
 div[role="main"] {
     display: inline-block;
@@ -625,16 +691,20 @@ div[role="main"] {
     }
    @media @tablet960px {
         display: block;
+        float: initial;
         overflow-y: initial;
         padding: 30px 0;
         width: 100%;
     }
 }
 
-.home-page div[role="main"] {
+div[role="main"].home-page {
     padding-top: 0;
 }
 
+.bk-zone {
+     margin-top: 4em;
+}
 
 .bk-zone,
 [data-widget-type="ecomproduct"] {
@@ -666,10 +736,9 @@ h2 {
 // Masonry Gallery
 // ---------------
 
-.home-page {
+#page-zones__template-widgets__gallery-home-gallery {
     .gallery-list {
         .clearfix;
-        margin-bottom: 4em;
        @media @tablet960px{
             margin-bottom: 2em;
         }
@@ -826,13 +895,15 @@ h2 {
 .template-footer {
     display: none;
     @media @tablet960px {
+        border-top: 1px solid #ededed;
         display: block;
-        float: left;
-        margin: 30px 0;
+        margin: 10px auto 30px;
+        padding-top: 20px;
         text-align: center;
-        width: 100%;
+        width: 90%;
         .socialicons, .companycopyright {
             display: block;
+            padding-top: 10px;
         }
     }
 }

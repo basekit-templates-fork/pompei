@@ -1,7 +1,7 @@
 {
-    "name": "Masonry",
-    "thumbnail": "thumbnail.png",
-    "screenshot" : "masonry-screenshot.jpg",
+    "name": "Pompei",
+    "thumbnail": "pompei-thumbnail.png",
+    "screenshot" : "pompei-screenshot.jpg",
     "widgetVersion": 2,
     "tags": {
         "en": ["photography", "design", "portfolio", "gallery", "camera", "images", "technology", "creative", "media"],
@@ -28,49 +28,49 @@
             "color2":"#D7AE6F",
             "color3":"#D7AE6F",
             "color4":"#2b2d30",
-            "color5":"#787878",
+            "color5":"#838282",
             "color6":"#b4b4b4",
             "color7":"#1C1D22"
         },
         "Swatch 2": {
             "color1":"#ffffff",
             "color2":"#ca3305",
-            "color3":"#2b2d30",
+            "color3":"#ca3305",
             "color4":"#2b2d30",
             "color5":"#7a7c80",
             "color6":"#a8aaad",
-            "color7":"#f0f0f0"
+            "color7":"#141414"
         },
         "Swatch 3": {
             "color1":"#ffffff",
             "color2":"#7fa05f",
-            "color3":"#4f4f4f",
+            "color3":"#7fa05f",
             "color4":"#2b2d30",
             "color5":"#7a7c80",
             "color6":"#a8aaad",
-            "color7":"#f0f0f0"
+            "color7":"#062742"
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#c13e6c",
-            "color3":"#4f4f4f",
+            "color2":"#E2C675",
+            "color3":"#E2C675",
             "color4":"#2b2d30",
             "color5":"#7a7c80",
             "color6":"#a8aaad",
-            "color7":"#f0f0f0"
+            "color7":"#102611"
         },
         "Swatch 5": {
             "color1":"#ffffff",
-            "color2":"#3e6fc1",
-            "color3":"#4f4f4f",
+            "color2":"#6298CA",
+            "color3":"#6298CA",
             "color4":"#2b2d30",
             "color5":"#7a7c80",
             "color6":"#a8aaad",
-            "color7":"#f0f0f0"
+            "color7":"#5C5249"
         }
     },
     "fontSwatch": {
-       "title": "Ek Mukta and PT Serif",
+       "title": "Montserrat and Lora",
         "font1": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "36px",
@@ -106,7 +106,7 @@
         "font5": {
             "font-family": "\"Lora\", \"Georgia\", serif",
             "font-size": "17px",
-            "font-weight": "inherit",
+            "font-weight": "400",
             "line-height": "30px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -124,8 +124,8 @@
          },
         "font7": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "15px",
-            "font-weight": "inherit",
+            "font-size": "14px",
+            "font-weight": "700",
             "line-height": "inherit",
             "color": "@color-swatch1",
             "letter-spacing": "1px",
@@ -144,7 +144,7 @@
         "font9": {
             "font-family": "\"Lora\", \"Georgia\", serif",
             "font-size": "20px",
-            "font-weight": "inherit",
+            "font-weight": "400",
             "line-height": "inherit",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"

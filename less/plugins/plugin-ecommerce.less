@@ -117,6 +117,16 @@
             @media @mobile650px {
                 width: 100%;
             }
+
+            &:last-child {
+                -webkit-box-flex: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                @media @tablet960px {
+                    width: auto;
+                }
+            }
         }
     }
 }
@@ -143,7 +153,7 @@
         color: @color-swatch2;
         font-family: @font-swatch4-font-family;
         font-size: @font-swatch3-font-size;
-        font-weight: @font-swatch4-font-weight;
+        font-weight: @font-swatch5-font-weight;
         padding-bottom: 0;
     }
 }
