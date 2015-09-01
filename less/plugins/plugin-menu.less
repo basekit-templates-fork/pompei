@@ -31,8 +31,8 @@
 
 // Navigation Title
 .menu-item-name {
-	background: lighten(@font-swatch7-background-color, 40%);
-	color: @font-swatch7-color;
+	background: @color-swatch2;
+	color: @color-swatch1;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
 	font-weight: @font-swatch7-font-weight;
@@ -41,7 +41,7 @@
 	text-transform: uppercase;
 	.transition(.5s all ease-out);
 	&:hover {
-		background: @font-swatch7-background-color-hover;
+		background: darken(@font-swatch7-background-color-hover, 5%);
 		text-decoration: none;
 	}
 	@media @mobile {
